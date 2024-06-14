@@ -4960,7 +4960,9 @@ func malg(stacksize int32) *g {
 // Put it on the queue of g's waiting to run.
 // The compiler turns a go statement into a call to this.
 func newproc(fn *funcval) {
+	// 获取当前的goroutine
 	gp := getg()
+	// 获取 caller的PC寄存器
 	pc := getcallerpc()
 	systemstack(func() {
 		newg := newproc1(fn, gp, pc, false, waitReasonZero)

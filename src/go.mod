@@ -1,6 +1,6 @@
 module std
 
-go 1.23
+go 1.22
 
 require (
 	golang.org/x/crypto v0.23.1-0.20240603234054-0b431c7de36a
